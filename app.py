@@ -10,7 +10,7 @@ from langchain.chat_models import ChatOpenAI
 load_dotenv()
 open_api_key = os.getenv("OPENAI_API_KEY")
 
-file_path = 'data/Hiker_Food.csv'
+file_path = 'Hiker_Food.csv'
 loader = CSVLoader(file_path=file_path)
 index_creator = VectorstoreIndexCreator()
 docsearch = index_creator.from_loaders([loader])
